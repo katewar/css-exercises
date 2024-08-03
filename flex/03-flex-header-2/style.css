@@ -9,9 +9,13 @@ body {
 }
 
 .header {
+  /*make header element into flex container*/
   background: white;
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
+  display: flex;
+  align-items: center;
+  padding: 8px;
 }
 
 .profile-image {
@@ -20,16 +24,20 @@ body {
   border-radius: 50%;
   width: 48px;
   height: 48px;
+  margin-left: 16px;
 }
 
 .logo {
+  /*margin-right 8px adds with 8px margin within "a" element to create 16px spacing - no margin collapsing horizontally*/
   color: rebeccapurple;
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
+  margin-right: 8px;
 }
 
 button {
+  /*no changes needed here*/
   border: none;
   border-radius: 8px;
   background: rebeccapurple;
@@ -41,8 +49,13 @@ a {
   /* this removes the line under our links */
   text-decoration: none;
   color: rebeccapurple;
+  margin: 0px 8px;
 }
 
 ul {
+  /*override unordered list default padding and margins*/
   list-style-type: none;
+  display: flex;
+  margin: 0px auto 0px 0px;
+  padding: 0px;
 }
