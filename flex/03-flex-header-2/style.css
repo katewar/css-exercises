@@ -14,26 +14,32 @@ body {
   border-bottom: 1px solid #ddd;
   box-shadow: 0 0 8px rgba(0,0,0,.1);
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   padding: 8px;
 }
 
+/*separate left and right header items using new div containers*/
+.left, .right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .profile-image {
+  /*no changes needed here*/
   background: rebeccapurple;
   box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  margin-left: 16px;
 }
 
 .logo {
-  /*margin-right 8px adds with 8px margin within "a" element to create 16px spacing - no margin collapsing horizontally*/
+  /*no changes needed here*/
   color: rebeccapurple;
   font-size: 32px;
   font-weight: 900;
   font-style: italic;
-  margin-right: 8px;
 }
 
 button {
@@ -49,13 +55,13 @@ a {
   /* this removes the line under our links */
   text-decoration: none;
   color: rebeccapurple;
-  margin: 0px 8px;
 }
 
 ul {
   /*override unordered list default padding and margins*/
   list-style-type: none;
   display: flex;
-  margin: 0px auto 0px 0px;
-  padding: 0px;
+  padding: 0;
+  margin: 0;
+  gap: 16px;
 }
