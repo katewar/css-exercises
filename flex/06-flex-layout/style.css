@@ -1,21 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+/* body is now flex container and oriented as a column */
 body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* both header and footer have the same flex alignment */
+.header, .footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+/* left and right links have the same flex alignment */
+.left-links, .right-links {
+  display: flex;
+  gap: 12px;
+}
+
+/* made the content class into a column flex container */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* added background color for the footer */
+.footer {
+  background-color: #eeeeee;
 }
 
 img {
   width: 600px;
 }
 
+/* added padding for the buttons */
 button {
   font-family: Roboto, sans-serif;
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 6px 12px;
 }
 
 input {
@@ -23,4 +55,17 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+/* removed list bullets and set padding+margin to 0 */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* removed link underlines and changed link color */
+a {
+  text-decoration: none;
+  color: #808080;
 }
