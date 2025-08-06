@@ -15,13 +15,18 @@ body {
   justify-content: center;
 }
 
+/* added flex, padding, and gap */
 .modal {
   background: white;
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  padding: 16px;
+  gap: 12px;
 }
 
+/* made flex grow and shrink = 0 for the ! icon and set basis to auto so that width/height are followed */
 .icon {
   color: royalblue;
   font-size: 26px;
@@ -33,6 +38,22 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 auto;
+}
+
+/* added styles for header element which includes top text and x button */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* added margin between header, body text, and continue/cancel buttons */
+.text {
+  margin-bottom: 12px;
 }
 
 .close-button {
